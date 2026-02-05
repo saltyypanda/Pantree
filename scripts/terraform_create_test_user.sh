@@ -11,7 +11,7 @@ fi
 
 # Configuration
 USERNAME="test@example.com"
-PASSWORD="Password123!"
+PASSWORD="example123"
 
 # Check required args
 if [[ -z "$USER_POOL_ID" || -z "$CLIENT_ID" ]]; then
