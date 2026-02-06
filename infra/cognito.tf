@@ -32,12 +32,3 @@ resource "aws_cognito_user_pool_client" "client" {
     retry_grace_period_seconds = 10
   }
 }
-
-output "user_pool_id" {
-  value = aws_cognito_user_pool.pool.id
-}
-
-output "user_pool_client_id" {
-  value = aws_cognito_user_pool_client.client.id
-  description = "Cognito App Client ID"
-}
