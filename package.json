@@ -3,7 +3,9 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
-    "dev": "expo start -c",
+    "backend": "bash scripts/start.sh",
+    "destroy": "cd infra && terraform destroy -auto-approve",
+    "frontend": "expo start -c",
     "android": "expo start -c --android",
     "ios": "expo start -c --ios",
     "web": "expo start -c --web",
