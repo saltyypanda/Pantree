@@ -29,3 +29,11 @@ output "db_port" {
 output "db_secret_arn" {
   value = aws_db_instance.database.master_user_secret[0].secret_arn
 }
+
+# -----------------------
+# Lambda outputs
+# -----------------------
+
+output "me_lambda_arn" {
+  value = aws_lambda_function.me.arn
+}
