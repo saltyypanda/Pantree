@@ -8,6 +8,7 @@ import {
   signUp as amplifySignUp,
 } from 'aws-amplify/auth';
 import { router } from 'expo-router';
+import { getMe } from '../api';
 
 type AuthStatus = 'loading' | 'authed' | 'unauthed';
 
@@ -33,6 +34,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     try {
       const currentUser = await getCurrentUser();
       setUser(currentUser);
+
+      await getMe();
+
       setStatus('authed');
     } catch (error) {
       setUser(null);
