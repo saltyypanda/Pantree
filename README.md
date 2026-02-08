@@ -1,8 +1,7 @@
 # Pantree
 A full-stack recipe and pantry management app built with **React Native**, **AWS**, and **PostgreSQL**.
 
-Pantree lets users securely sign in, store recipes, and manage their pantry using a serverless backend.  
-This project is also a learning exploration of cloud architecture.
+Pantree lets users securely sign in, store recipes, and manage their pantry using a serverless backend. This project is also a learning exploration of cloud architecture.
 
 ## Learning Goals
 
@@ -52,16 +51,6 @@ pantree/
 │  └─ zip-lambdas.mjs
 └─ README.md
 ```
-
-## Authentication Flow
-1. User signs in via Cognito (Amplify)
-2. App receives JWT tokens
-3. App calls `GET /me`
-4. API Gateway validates JWT
-5. Lambda upserts user into database
-6. Backend returns user info
-
-This `/me` endpoint acts as a **bootstrap** for backend identity.
 
 ## Getting Started
 
@@ -156,5 +145,14 @@ npm run destroy
 * Search and filtering
 * Offline-friendly caching
 
-## License
-MIT
+## Notes
+
+### Authentication Flow
+1. User signs in via Cognito (Amplify)
+2. App receives JWT tokens
+3. App calls `GET /me`
+4. API Gateway validates JWT
+5. Lambda upserts user into database
+6. Backend returns user info
+
+This `/me` endpoint acts as a **bootstrap** for backend identity.
