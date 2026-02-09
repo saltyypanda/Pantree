@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { View, Text, TextInput, Button } from "react-native";
 import { useAuth } from "@/lib/auth/AuthProvider";
+import { router } from "expo-router";
 
 export default function SignInPage() {
   const { signIn } = useAuth();
@@ -32,6 +33,7 @@ export default function SignInPage() {
       />
 
       <Button title="Sign In" onPress={handleSubmit} />
+      <Button title="Sign Up" onPress={ () => router.push("/(auth)/signup")} />
     </View>
   );
 }

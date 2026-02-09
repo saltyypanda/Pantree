@@ -28,6 +28,7 @@ export default function RootLayout() {
         <AuthProvider>
           <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
           <Stack screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="(auth)" />
             <Stack.Screen name="(tabs)" />
           </Stack>
           <PortalHost />
