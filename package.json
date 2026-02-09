@@ -5,6 +5,7 @@
   "scripts": {
     "deploy:backend": "bash scripts/deploy-backend.sh",
     "destroy:backend": "cd infra && terraform destroy -auto-approve",
+    "rebuild:services": "bash scripts/build-lambdas.sh && cd infra && terraform apply -auto-approve",
     "dev": "expo start -c",
     "android": "expo start -c --android",
     "ios": "expo start -c --ios",
