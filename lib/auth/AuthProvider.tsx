@@ -66,7 +66,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }
 
   async function signUp(email: string, password: string) {
-    throw new Error('Not implemented');
+    try {
+      await amplifySignUp({
+        username: email,
+        password,
+      });
+    } catch (error) {
+      alert(error)
+    }
+    checkSession();
+    router.replace("/(auth)/signin");
   }
 
   return (
